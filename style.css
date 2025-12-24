@@ -1,0 +1,114 @@
+/* General body style */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #74ebd5, #ACB6E5);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Headings */
+h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 48px;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px #555;
+}
+
+/* Forms */
+form {
+    width: 350px;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button.deposit {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button.withdraw {
+    background-color: #FF6F61;
+    color: white;
+}
+
+button.transfer {
+    background-color: #f7b731;
+    color: white;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Links styled as buttons */
+a.button {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #FF6F61;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+a.button:hover {
+    background-color: #FF3B2E;
+    transform: translateY(-3px);
+}
+
+/* Messages */
+p.message {
+    text-align: center;
+    font-weight: bold;
+    color: red;
+}
+
+/* User/admin list */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: rgba(255,255,255,0.9);
+    margin: 5px auto;
+    padding: 10px;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    font-size: 16px;
+}

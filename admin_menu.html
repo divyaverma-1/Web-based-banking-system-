@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Menu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Admin Menu</h1>
+    {% if message %}
+        <p class="message">{{ message }}</p>
+    {% endif %}
+    <h2>Users:</h2>
+    <ul>
+    {% for user, info in users.items() %}
+        <li>{{ user }} - Balance: ₹{{ info.balance }}</li>
+    {% endfor %}
+    </ul>
+    <form method="POST">
+        <input type="text" name="delete_user" placeholder="Username to delete">
+        <button type="submit" class="withdraw">Delete User</button>
+    </form>
+    <a href="/" class="button">Logout</a>
+</body>
+</html>

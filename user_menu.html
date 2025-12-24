@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ username }}'s Account</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>{{ username }}'s Account</h1>
+    <p>Balance: ₹{{ balance }}</p>
+    {% if message %}
+        <p class="message">{{ message }}</p>
+    {% endif %}
+    <form method="POST">
+        <input type="number" step="0.01" name="amount" placeholder="Amount" required>
+        <input type="text" name="recipient" placeholder="Recipient (for transfer)">
+        <button type="submit" class="deposit" name="action" value="deposit">Deposit</button>
+        <button type="submit" class="withdraw" name="action" value="withdraw">Withdraw</button>
+        <button type="submit" class="transfer" name="action" value="transfer">Transfer</button>
+    </form>
+    <a href="/" class="button">Logout</a>
+</body>
+</html>
